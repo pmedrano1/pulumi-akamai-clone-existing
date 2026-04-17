@@ -1,0 +1,11 @@
+name: config-update
+description: updating akamai config using pulumi
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: python
