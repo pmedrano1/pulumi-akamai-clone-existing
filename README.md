@@ -124,5 +124,4 @@ pulumi destroy
 ```
 
 ---
-*Developed as a robust Infrastructure-as-Code (IaC) template for Akamai Adaptive Media Delivery (AMD).*
-```
+*Developed as a Infrastructure-as-Code (IaC) template for Akamai Adaptive Media Delivery (AMD).*
