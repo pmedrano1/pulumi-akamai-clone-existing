@@ -2,6 +2,22 @@
 
 This project provides a robust workflow for cloning existing Akamai Property configurations into a brand-new setup, targeting the **Staging** network. It is specifically designed to handle **Shared Certificate (Standard TLS)** hostnames and **Switchkey** account contexts.
 
+🔎 Resource Discovery
+Before running Pulumi, you must identify your Source and Destination IDs. Since group creation is generally a provisioned service (not self-service API), you must find existing groups.
+
+1. Find your Group and Contract IDs
+Use the Akamai CLI to browse your account hierarchy:
+
+Bash
+# List all groups and their parent/contract associations
+akamai property groups list
+2. Find IDs for an Existing Property
+If you know the property name but not its location:
+
+Bash
+# This returns the contractId and groupId for the specific property
+akamai property search --property-name "MY_EXISTING_CONFIG"
+
 ## 🚀 Quick Start
 
 ### 1. Prerequisites
@@ -70,6 +86,16 @@ pulumi config set notificationEmail "admin@example.com"
 **Solution:** Explicitly target the environment you want to copy:
 * Use `source_prop_metadata.production_version` for the live site.
 * Use `source_prop_metadata.staging_version` for the latest tested changes.
+
+### 5. Standard TLS (Shared Cert) Constraints
+**Issue:**: Shared Cert activations fail if the security settings are mismatched.
+**Solution:**: * Hostname Level: cert_provisioning_type must be CPS_MANAGED.
+
+Rule Level: The rule options must have is_secure: False. The script automatically patches this during the clone.
+
+### 6. Formal Product Names
+**Issue:**: Shorthand IDs like prd_AMD can cause inconsistent API behavior.
+**Solution:**: Always use the formal product ID: prd_Adaptive_Media_Delivery.
 
 ---
 
