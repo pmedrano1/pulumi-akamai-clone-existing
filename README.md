@@ -1,4 +1,3 @@
-```markdown
 # Akamai Configuration Cloner (Pulumi + Python)
 
 This project provides a robust workflow for cloning existing Akamai Property configurations into a brand-new setup, targeting the **Staging** network. It is specifically designed to handle **Shared Certificate (Standard TLS)** hostnames and **Switchkey** account contexts.
