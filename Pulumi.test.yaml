@@ -1,10 +1,10 @@
 encryptionsalt: v1:f2FOTRcfmzU=:v1:1PWKfNNi8v8KdCHB:cS7vAU6uOr23ry+Xn1mfv5tyU6rRsQ==
 config:
-  config-update:contractId: ctr_W-2HAFUF
-  config-update:groupId: grp_267587
+  config-update:contractId: ctr_xxxxxxxx
+  config-update:groupId: grp_xxxxxxxx
   config-update:sourcePropertyName: pulumi_a-vrv-amd
   config-update:newPropertyName: cloned_pulumi_a-vrv-amd
   config-update:newPropertyHostname: cloned-pulumi-demo-vrv.akamaized.net
   config-update:newEdgeHostname: cloned-pulumi-demo-vrv.akamaized.net
   config-update:notificationEmail: admin@example.com
-  akamai:configSection: crunchy-pulumi
+  akamai:configSection: xxxxxxxxxxxx
