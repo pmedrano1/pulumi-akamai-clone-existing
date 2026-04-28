@@ -51,8 +51,6 @@ If you are using a Switchkey account, you must set the provider context globally
 # Specify the .edgerc section
 pulumi config set akamai:configSection "default"
 
-# Specify the Account Switchkey ID
-pulumi config set akamai:accountKey "F-AC-XXXXXX"
 ```
 
 ### 4. Property Configuration
