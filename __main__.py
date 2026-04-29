@@ -72,7 +72,7 @@ staging_activation = akamai.PropertyActivation("activateStaging",
     property_id=new_property.id,
     version=new_property.latest_version,
     network="STAGING",
-    contacts=[email],
+    contacts=email,
     note=f"Clean clone from {source_prop_name} (Prod v{source_prop_metadata.production_version})",
     auto_acknowledge_rule_warnings=True 
 )
