@@ -39,7 +39,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
-pip install pulumi pulumi-akamai
+pip install -r requirements.txt
 ```
 
 ### 3. Identity Configuration (Switchkey)
